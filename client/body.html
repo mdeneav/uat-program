@@ -1,0 +1,27 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>TechChat @ MIT Museum Program</h1>
+      <div id="date">2:00 - 3:00 pm Saturday and Sunday
+        <br>April 1st & 2nd and 8th & 9th
+      </div>
+    </header>
+
+    <ul>
+      {{#each presenters}}
+        {{> presenter}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="presenter">
+  <li class="outer">
+    <div class="date">{{date}}</div>
+    <ul>
+      {{#each presenters}}
+        <li class="inner"><div class="title">{{title}}</div> - {{name}}</li>
+      {{/each}}
+    </ul>
+  </li>
+</template>
